@@ -1,0 +1,18 @@
+<h2>Hello World, I am the Index Handlebars</h2>
+
+<div class='container content'>
+    <h1>Burger App</h1>
+
+    {{!-- {{> addBurger }} --}}
+
+    <div class='content-burger'>
+        {{#each burgers}}
+            <div class='content-burger__list' id={{id}}>
+                <p>{{burger_name}}</p>
+                <button class='btn btn-default devoured' data-id='{{id}}' data-state='{{devoured}}'>
+                    {{#if devoured}} devour {{else}} add to Devoured {{/if}}
+                </button>
+            </div>
+        {{/each}}
+    </div>
+</div>
